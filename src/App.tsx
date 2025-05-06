@@ -61,11 +61,11 @@ function App() {
 
   return (
     <div
-      className='min-h-screen flex flex-col items-center md:justify-center mt-20 md:m-0 bg-slate-50'
+      className='min-h-screen flex flex-col items-center md:justify-center bg-slate-50'
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <h1 className='text-3xl font-bold mb-4'>2048</h1>
+      <h1 className='mt-20 md:m-0 text-3xl font-bold mb-4'>2048</h1>
       <div className='flex justify-around text-xl mb-4 w-full'>
         <div className='mr-2 font-bold text-2xl'>Score: {score}</div>
         <div className='ml-2'>Best Score: {bestScore}</div>
