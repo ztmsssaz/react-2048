@@ -21,6 +21,7 @@ const mergeRow = (row: (number | null)[]): [number[], boolean] => {
   }
 
   while (merged.length < 4) {
+    //@ts-ignore
     merged.push(null)
   }
 
