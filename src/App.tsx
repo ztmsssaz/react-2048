@@ -61,7 +61,7 @@ function App() {
 
   return (
     <div
-      className='min-h-screen flex flex-col items-center justify-center bg-slate-50'
+      className='min-h-screen flex flex-col items-center md:justify-center mt-20 md:m-0 bg-slate-50'
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
