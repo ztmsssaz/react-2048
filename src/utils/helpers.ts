@@ -1,4 +1,4 @@
-import {type Board, type Tile} from '../types'
+import {type Board} from '../types'
 
 export const getEmptyBoard = (): Board => {
   return Array(4)
