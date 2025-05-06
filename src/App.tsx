@@ -28,9 +28,20 @@ function App() {
       else move('up')
     }
 
-    setTouchStart(null) // پس از اتمام حرکت، مقدار شروع را ریست می‌کنیم
+    setTouchStart(null)
   }
+  useEffect(() => {
+    const handleTouchMove = (e: TouchEvent) => {
+      if (window.scrollY === 0) {
+        e.preventDefault()
+      }
+    }
 
+    document.addEventListener('touchmove', handleTouchMove, {passive: false})
+    return () => {
+      document.removeEventListener('touchmove', handleTouchMove)
+    }
+  }, [])
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const directionMap: {[key: string]: 'up' | 'down' | 'left' | 'right'} = {
